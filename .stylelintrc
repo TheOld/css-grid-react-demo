@@ -1,0 +1,69 @@
+{
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-idiomatic-sass",
+    "stylelint-config-css-modules"
+  ],
+  "plugins": [
+    "stylelint-number-z-index-constraint",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-declaration-use-variable",
+    "stylelint-high-performance-animation",
+    "stylelint-images"
+  ],
+  "syntax": "scss",
+  "rules": {
+    "block-no-empty": true,
+    "block-closing-brace-newline-before": null,
+    "block-opening-brace-newline-after": null,
+    "block-opening-brace-space-after": null,
+    "block-opening-brace-space-before": null,
+    "at-rule-name-case": "lower",
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-trailing-semicolon": null,
+    "declaration-no-important": null,
+    "indentation": 2,
+    "max-nesting-depth": 3,
+    "comment-empty-line-before": null,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "selector-descendant-combinator-no-non-space": true,
+    "selector-max-id": 0,
+    "selector-type-case": "lower",
+    "selector-no-qualifying-type": true,
+    "plugin/no-low-performance-animation-properties": true,
+    "sh-waqar/declaration-use-variable": [
+      [
+        "/color/"
+      ]
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": [
+          "first-nested"
+        ]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes"
+        ]
+      }
+    ],
+    "plugin/number-z-index-constraint": {
+      "min": 0,
+      "max": 10
+    },
+    "images/broken": true,
+    "images/prefer-data-uri": 256,
+    "declaration-property-value-blacklist": {
+      "/^border/": [
+        "0"
+      ]
+    }
+  }
+}

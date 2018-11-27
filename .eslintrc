@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype",
+    "jsdoc"
+  ],
+  "rules": {
+    // Enforce component methods order
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "static-methods",
+          "constructor",
+          "lifecycle",
+          "render",
+          "/^render.+$/",
+          "/^handle.+$/",
+          "everything-else"
+        ]
+      }
+    ],
+  }
+}

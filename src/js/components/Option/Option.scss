@@ -1,0 +1,52 @@
+@import '../../../css/core/colors';
+
+@import '../../../css/core/typography';
+
+@import '../../../css/core/variables';
+
+@import '../../../css/core/mixins';
+
+.option {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  padding: 0 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 200ms $standard-easing;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gallery;
+  }
+
+  &:hover {
+    background-color: $perano-light;
+    cursor: pointer;
+
+    .label {
+      color: $royal-blue;
+    }
+  }
+}
+
+.label {
+  @include fontSize(13px);
+
+  @include lineHeight(18px);
+  max-width: 80%;
+  color: $ghost;
+  text-overflow: ellipsis;
+  transition: color 200ms $standard-easing;
+
+  .active & {
+    color: $royal-blue;
+  }
+}
+
+.active {
+  .label {
+    color: $royal-blue;
+  }
+}
+
+

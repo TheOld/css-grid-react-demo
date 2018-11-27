@@ -1,0 +1,199 @@
+@import 'colors';
+
+$font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$montserrat: 'Montserrat', $font-fallback;
+$open-sans: 'Open Sans', $font-fallback;
+
+/* ----------  Modular scale ratios  ---------- */
+$minor-second: 1.067;
+$major-second: 1.125;
+$minor-third: 1.2;
+$major-third: 1.25;
+$perfect-fourth: 1.3334;
+$augmented-fourth: 1.414;
+$perfect-fifth: 1.5;
+$golden-ratio: 1.618;
+$major-sixth: 1.667;
+$minor-seventh: 1.778;
+$major-seventh: 1.875;
+$octave: 2;
+$major-tenth: 2.5;
+$major-eleventh: 2.667;
+$major-twelfth: 3;
+$pi: 3.1416;
+
+// body font-size in pixels for Desktops
+$body: 16px;
+$ratio: $minor-third;
+$line-height: $major-third;
+
+// body font-size in pixels for Mobiles
+$mbody: 12px;
+$mratio: $minor-third;
+$mline-height: $perfect-fifth;
+
+
+
+/* ----------  Desktop  ---------- */
+//    Calculation
+$p: round($body);
+$h6: round($body);
+$h5: round(($h6 * $ratio) + 1);
+$h4: round($h5 * $ratio);
+$h3: round($h4 * $ratio);
+$h2: round($h3 * $ratio);
+$h1: round($h2 * $ratio);
+
+//    Line Height
+$lh-p: $line-height;
+$lh-h1: $line-height;
+$lh-h2: $line-height;
+$lh-h3: $line-height;
+$lh-h4: $line-height;
+$lh-h5: $line-height;
+$lh-h6: $line-height;
+
+/* ----------  Mobile  ---------- */
+//    Calculation
+$mp: round($mbody);
+$mh6: round($mbody);
+$mh5: round($mh6 * $mratio);
+$mh4: round($mh5 * $mratio);
+$mh3: round($mh4 * $mratio);
+$mh2: round($mh3 * $mratio);
+$mh1: round($mh2 * $mratio);
+
+//    Line Height
+$mlh-p: $mline-height;
+$mlh-h1: $mline-height;
+$mlh-h2: $mline-height;
+$mlh-h3: $mline-height;
+$mlh-h4: $mline-height;
+$mlh-h5: $mline-height;
+$mlh-h6: $mline-height;
+
+
+//    Calculation
+body {
+  // color: $comet;
+  font-size: $body;
+  line-height: $line-height;
+  font-family: $open-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $montserrat;
+  font-weight: normal;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+p {
+  font-family: $open-sans;
+}
+
+a {
+  text-decoration: none;
+}
+
+small {
+  @include fontSize($mbody);
+  @include lineHeight($mlh-p);
+  display: inline-block;
+  transition: transform, opacity;
+}
+
+label {
+  display: block;
+  font-family: $montserrat;
+  @include fontSize(13px);
+  @include lineHeight(16px);
+  color: $tundora;
+  margin-bottom: calculateRem(10px);
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  p {
+    @include fontSize($mbody);
+    @include lineHeight($mlh-p);
+  }
+
+  h6 {
+    @include fontSize($mh6);
+    @include lineHeight($mlh-h6);
+  }
+
+  h5 {
+    @include fontSize($mh5);
+    @include lineHeight($mlh-h5);
+  }
+
+  h4 {
+    @include fontSize($mh4);
+    @include lineHeight($mlh-h4);
+  }
+
+  h3 {
+    @include fontSize($mh3);
+    @include lineHeight($mlh-h3);
+  }
+
+  h2 {
+    @include fontSize($mh2);
+    @include lineHeight($mlh-h2);
+  }
+
+  h1 {
+    @include fontSize($mh1);
+    @include lineHeight($mlh-h1);
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  p {
+    @include fontSize($body);
+    @include lineHeight($lh-p);
+  }
+
+  h6 {
+    @include fontSize($h6);
+    @include lineHeight($lh-h6);
+  }
+
+  h5 {
+    @include fontSize($h5);
+    @include lineHeight($lh-h5);
+  }
+
+  h4 {
+    @include fontSize($h4);
+    @include lineHeight($lh-h4);
+  }
+
+  h3 {
+    @include fontSize($h3);
+    @include lineHeight($lh-h3);
+  }
+
+  h2 {
+    @include fontSize($h2);
+    @include lineHeight($lh-h2);
+  }
+
+  h1 {
+    @include fontSize($h1);
+    @include lineHeight($lh-h1);
+  }
+}

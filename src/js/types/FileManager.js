@@ -1,0 +1,8 @@
+/**
+* File Manager Types
+*/
+
+export const FILES_FETCHED = 'FILES_FETCHED';
+export const FILES_UPLOADED = 'FILES_UPLOADED';
+export const DELETE_UPLOADED_FILE = 'DELETE_UPLOADED_FILE';
+export const UPDATE_UPLOADED_FILE = 'UPDATE_UPLOADED_FILE';

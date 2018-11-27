@@ -1,0 +1,14 @@
+// Define all colours here and export
+// They'll be available for Styled components through Themes
+$white: #ffffff;
+$black: #000000;
+$alto: #D2D2D2;
+$dusty-gray: #9B9B9B;
+$tundora: #4A4A4A;
+
+:export {
+  white: $white;
+  black: $black;
+  alto: $alto;
+  dustyGray: $dusty-gray;
+}

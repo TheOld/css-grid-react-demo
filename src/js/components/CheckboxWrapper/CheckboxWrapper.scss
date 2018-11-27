@@ -1,0 +1,57 @@
+@import '../../../css/core/colors';
+
+@import '../../../css/core/mixins';
+
+@import '../../../css/core/variables';
+.checkbox-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-wrapper-active {
+  margin-bottom: 5.5rem;
+}
+
+.inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  @include fontSize(13px);
+
+  @include lineHeight(14px);
+  display: block;
+  width: 100%;
+  margin-left: 0.5rem;
+  grid-column: 2;
+  color: $ghost;
+  font-weight: 600;
+  transition: color 220ms $standard-easing;
+
+  &:hover {
+    color: $royal-blue;
+    cursor: pointer;
+  }
+}
+
+.label-active {
+  color: $royal-blue;
+}
+
+.info {
+  opacity: 0;
+  margin-top: 10px;
+  color: $comet;
+  text-align: center;
+  transition: transform 180ms $accelerating-easing, opacity 180ms $accelerating-easing;
+  transform: translate3d(0, -50%, 0);
+}
+
+.info-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

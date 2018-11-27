@@ -1,0 +1,44 @@
+@import '../core/colors';
+
+.button {
+  -webkit-appearance: none;
+  padding: 15px 2rem;
+  font-family: $montserrat;
+  @include fontSize(13px);
+  @include lineHeight(16px);
+  text-align: center;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-ghost {
+    background-color: transparent;
+    border: 1px solid $dusty-gray;
+  }
+
+  &-small {
+    padding: 0.625rem 1.25rem;
+  }
+
+  &-large {
+    padding: 1.375rem 1.625rem;
+    border-radius:  2.25rem;
+    font-weight: bold;
+    @include fontSize(22px);
+    @include lineHeight(27px);
+  }
+
+  &-link {
+    // Important here to override styled components theme inheritance
+    background-color: transparent !important;
+        border-color: $dusty-gray !important;
+    border-width: 0 0 1px 0;
+
+    padding: 0 0 4px 0;
+    border-radius: 0;
+  }
+}
+

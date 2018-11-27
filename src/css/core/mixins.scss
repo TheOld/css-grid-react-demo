@@ -1,0 +1,22 @@
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $rem-size: $size / 16px;
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$rem-size}rem;
+}
+
+@function calculateNum($lheight) {
+  $num-size: $lheight;
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$num-size};
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin lineHeight($lheight) {
+  line-height: calculateNum($lheight);
+}

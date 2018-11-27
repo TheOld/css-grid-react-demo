@@ -1,0 +1,146 @@
+@import '../../../css/core/colors';
+
+@import '../../../css/core/mixins';
+
+@import '../../../css/core/variables';
+
+.root {
+  width: 100%;
+}
+
+.saturation-wrapper {
+  position: relative;
+  width: 100%;
+  height: 7rem;
+}
+
+.hue-wrapper {
+  position: relative;
+  width: 100%;
+  height: 1.125rem;
+
+  > div {
+    max-width: 100%;
+  }
+}
+
+.hue-picker {
+  width: 100%;
+}
+
+.chrome-picker {
+  display: block;
+}
+
+.active-color-circle {
+  display: block;
+  min-width: 1.313rem;
+  min-height: 1.313rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  background-color: $gallery;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-top: 2.875rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  // width: 10.13rem;
+  min-width: 162px;
+  padding: 1.375rem 32px;
+  border: 1px solid $transparent;
+  border-radius: 0.25rem;
+  flex-direction: column;
+  background-color: $alabaster;
+  transition: filter 220ms $standard-easing, border-color 220ms $standard-easing, box-shadow 220ms $standard-easing;
+  filter: grayscale(1);
+
+  &:focus-within {
+    border-color: $ghost;
+    box-shadow: 0 0.875rem 1.75rem rgba(50, 60, 90, 0.05), 0 0.625rem 0.625rem rgba(50, 60, 90, 0.01);
+    filter: grayscale(0);
+
+    .hex-label {
+      color: $comet;
+    }
+
+    .input {
+      color: $bright-gray;
+    }
+  }
+
+  &:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+
+    .hex-label {
+      color: $comet;
+    }
+
+    .input {
+      color: $bright-gray;
+    }
+  }
+
+  &:first-child {
+    margin-right: 8px;
+  }
+}
+
+.checkbox-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-wrapper-active {
+  margin-bottom: 5.5rem;
+}
+
+.inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.hex-label {
+  @include fontSize(13px);
+
+  @include lineHeight(18px);
+  position: relative;
+  color: $ghost;
+  transition: color 220ms $standard-easing;
+}
+
+.title-label {
+  @include fontSize(10px);
+
+  @include lineHeight(15px);
+  position: relative;
+  z-index: 5;
+  display: block;
+  width: 100%;
+  height: 0.9375rem;
+  margin-top: 0.875rem;
+  color: $ghost;
+  text-transform: uppercase;
+  letter-spacing: 0.33px;
+  transition: color 220ms $standard-easing;
+}
+
+.input {
+  padding-bottom: 0.5rem;
+  border: none;
+  border-bottom-style: solid;
+  color: $ghost;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 220ms $standard-easing;
+}

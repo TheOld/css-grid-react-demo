@@ -1,0 +1,70 @@
+@import '../../../css/core/colors';
+@import '../../../css/core/mixins';
+@import '../../../css/core/variables';
+
+.list-item {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 2.5rem 1.25rem 0;
+  border-bottom: 1px solid $gallery;
+
+  &:first-child {
+    border-top: 1px solid $gallery;
+  }
+}
+
+.list-item-alt {
+  padding: 1.25rem 2.5rem 0.75rem 0;
+  height: 48px;
+
+  .name {
+    color: $royal-blue;
+    font-weight: 600;
+
+    @include fontSize(13px);
+
+    @include lineHeight(18px);
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $comet;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info {
+  margin-top: -4px;
+
+  small {
+    color: $manatee;
+    font-weight: 700;
+  }
+}
+
+.remove {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  display: flex;
+  width: 1.375rem;
+  height: 1.375rem;
+  border: 1px solid $perano;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  transition: border 220ms $standard-easing, transform $medium-expand $accelerating-easing, opacity $medium-expand $accelerating-easing;
+
+  &:hover {
+    border: 1px solid $azure;
+  }
+}

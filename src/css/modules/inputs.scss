@@ -1,0 +1,16 @@
+@import '../core/colors';
+
+.field {
+  border: 1px solid $alto;
+  border-radius: 2px;
+  padding: 12px 1.25rem;
+  margin-bottom: 32px;
+  font-family: $open-sans;
+  font-weight: 300;
+  @include fontSize(16px);
+  @include lineHeight(22px);
+  color: $dusty-gray;
+  outline: none;
+
+  // TODO: Add focus style
+}

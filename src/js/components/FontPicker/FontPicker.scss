@@ -1,0 +1,97 @@
+@import '../../../css/core/colors';
+
+@import '../../../css/core/variables';
+
+@import '../../../css/core/mixins';
+
+.root {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr 140px;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $alabaster;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: $comet;
+  font-weight: 600;
+  text-align: center;
+}
+
+.helper {
+  display: block;
+  margin-top: 8px;
+  color: $comet;
+  text-align: center;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-wrapper-active {
+  margin-bottom: 5.5rem;
+}
+
+.inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  @include fontSize(13px);
+
+  @include lineHeight(14px);
+  display: block;
+  width: 100%;
+  margin-left: 0.5rem;
+  grid-column: 2;
+  color: $ghost;
+  font-weight: 600;
+  transition: color 220ms $standard-easing;
+
+  &:hover {
+    color: $royal-blue;
+    cursor: pointer;
+  }
+}
+
+.label-active {
+  color: $royal-blue;
+}
+
+.info {
+  opacity: 0;
+  margin-top: 10px;
+  color: $comet;
+  text-align: center;
+  transition: transform 180ms $accelerating-easing, opacity 180ms $accelerating-easing;
+  transform: translate3d(0, -50%, 0);
+}
+
+.info-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.font-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.font-list-title {
+  @include fontSize(13px);
+  margin-bottom: 20px;
+  color: $comet;
+  font-weight: 400;
+  text-align: center;
+}

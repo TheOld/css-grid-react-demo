@@ -3,15 +3,53 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "ajax-interceptor": "^1.0.1",
+    "animejs": "^2.2.0",
+    "classnames": "^2.2.6",
+    "cloudinary-core": "^2.5.0",
+    "cloudinary-react": "^1.0.6",
+    "connected-react-router": "^5.0.1",
+    "create-react-class": "^15.6.3",
+    "eslint-plugin-react": "^7.11.1",
+    "fetch-intercept": "^2.3.1",
+    "flow-bin": "^0.86.0",
+    "history": "^4.7.2",
+    "js-base64": "^2.4.9",
+    "ky": "^0.5.1",
+    "node-sass": "^4.10.0",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.6.2",
+    "rc-progress": "^2.2.6",
+    "react": "^16.6.3",
+    "react-app-rewire-eslint": "^0.2.3",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-color": "^2.14.1",
+    "react-dom": "^16.6.3",
+    "react-dropzone": "^7.0.1",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "react-select": "^2.1.1",
+    "react-select-async-paginate": "^0.2.0",
+    "react-spring": "^6.1.8",
+    "react-stripe-elements": "^2.0.1",
+    "react-tappable": "^1.0.4",
+    "react-widgets": "^4.4.6",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "styled-components": "^4.1.1",
+    "styled-system": "^3.1.11",
+    "superagent": "^4.0.0-beta.5",
+    "superagent-promise-plugin": "^3.2.0",
+    "zxcvbn": "^4.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +59,20 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-jsdoc": "^3.9.1",
+    "react-app-rewired": "^1.6.2",
+    "redux-devtools-extension": "^2.13.5",
+    "stylelint": "^9.8.0",
+    "stylelint-config-idiomatic-sass": "^1.0.0",
+    "stylelint-config-sass-guidelines": "^5.2.0",
+    "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
+    "stylelint-declaration-use-variable": "^1.7.0",
+    "stylelint-high-performance-animation": "^1.1.1",
+    "stylelint-images": "^2.0.0",
+    "stylelint-number-z-index-constraint": "^2.0.0",
+    "stylelint-webpack-plugin": "^0.10.5"
+  }
 }
